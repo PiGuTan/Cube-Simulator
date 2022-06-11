@@ -1,0 +1,15 @@
+Line,Weight
+STR +9%,5
+DEX +9%,5
+INT +9%,5
+LUK +9%,5
+ATT +9%,3
+MATT +9%,3
+Critical Chance +9%,4
+Damage +9%,3
+All Stats +6%,4
+Ignore Enemy Defense +30%,3
+5% chance to ignore 20% damage when hit,4
+5% chance to ignore 40% damage when hit,4
+Damage when attacking boss monsters +20%,3
+Damage when attacking boss monsters +30%,2

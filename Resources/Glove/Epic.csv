@@ -1,0 +1,11 @@
+Line,Weight
+STR +6%,5
+DEX +6%,5
+INT +6%,5
+LUK +6%,5
+Max HP +6%,5
+Max MP +6%,5
+DEF +6%,3
+All Stats +3%,2
+15% chance to recover 95 HP when defeating a monster,3
+15% chance to recover 95 MP when defeating a monster,3

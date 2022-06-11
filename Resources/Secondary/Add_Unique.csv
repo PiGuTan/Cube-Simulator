@@ -1,0 +1,20 @@
+Line,Weight
+Max HP +7%,3
+Max MP +7%,3
+ATT +9%,2
+MATT +9%,2
+Critical Chance +9%,2
+STR +9%,3
+DEX +9%,3
+INT +9%,3
+LUK +9%,3
+Damage +9%,1
+All Stats +6%,2
+STR +1 per 10 Character Levels,2
+DEX +1 per 10 Character Levels,2
+INT +1 per 10 Character Levels,2
+LUK +1 per 10 Character Levels,2
+15% chance to recover 85 HP when attacking,3
+15% chance to recover 85 MP when attacking,3
+Ignore Enemy Defense +4%,1
+Damage when attacking boss monsters +12%,1

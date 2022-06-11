@@ -1,0 +1,20 @@
+Line,Weight
+Max HP +10%,3
+Max MP +10%,3
+ATT +12%,2
+MATT +12%,2
+Critical Chance +12%,2
+STR +12%,3
+DEX +12%,3
+INT +12%,3
+LUK +12%,3
+Damage +12%,1
+All Stats +9%,2
+STR +2 per 10 Character Levels,2
+DEX +2 per 10 Character Levels,2
+INT +2 per 10 Character Levels,2
+LUK +2 per 10 Character Levels,2
+ATT +1 per 10 Character Levels,1
+MATT +1 per 10 Character Levels,1
+Status Resistance +5,1
+Ignore Enemy Defense +5%,1

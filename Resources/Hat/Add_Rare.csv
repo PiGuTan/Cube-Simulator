@@ -1,0 +1,20 @@
+Line,Weight
+STR +10,3
+DEX +10,3
+INT +10,3
+LUK +10,3
+Max HP +100,3
+Max MP +100,3
+Speed +6,3
+Jump +6,3
+ATT +10,2
+MATT +10,2
+DEF +100,3
+STR +2%,2
+DEX +2%,2
+INT +2%,2
+LUK +2%,2
+Max HP +2%,2
+Max MP +2%,2
+DEF +2%,2
+All Stats +3,2
