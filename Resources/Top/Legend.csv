@@ -1,0 +1,14 @@
+Line,Weight
+STR +12%,4
+DEX +12%,4
+INT +12%,4
+LUK +12%,4
+Max HP +12%,4
+Max MP +12%,4
+DEF +12%,4
+All Stats +9%,3
+Elemental Resistance +10%,2
+10% chance to ignore 20% damage when hit,3
+10% chance to ignore 40% damage when hit,3
+Invincibility time +3 seconds when hit,3
+4% chance of being invincible for 7 seconds when hit,3

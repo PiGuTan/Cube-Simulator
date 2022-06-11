@@ -1,0 +1,16 @@
+Line,Weight
+STR +9%,5
+DEX +9%,5
+INT +9%,5
+LUK +9%,5
+Max HP +9%,6
+Max MP +9%,6
+DEF +9%,4
+All Stats +6%,4
+5% chance to ignore 20% damage when hit,4
+5% chance to ignore 40% damage when hit,4
+Invincibility time +2 seconds when hit,4
+2% chance of being invincible for 7 seconds when hit,4
+30% chance to reflect 50% of damage taken,4
+30% chance to reflect 70% of damage taken,2
+Increase efficiency of HP recovery items and skills by 30%,4

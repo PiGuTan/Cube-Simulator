@@ -1,0 +1,27 @@
+Line,Weight
+STR +12,3
+DEX +12,3
+INT +12,3
+LUK +12,3
+Max HP +120,3
+Max MP +120,3
+ATT +12,2
+MATT +12,2
+STR +3%,3
+DEX +3%,3
+INT +3%,3
+LUK +3%,3
+ATT +3%,1
+MATT +3%,1
+Critical Chance +4%,1
+Damage +3%,1
+All Stats +5,2
+20% chance to recover 240 HP when attacking,1
+20% chance to recover 120 MP when attacking,1
+20% chance to apply level 6 poison effect when attacking,1
+20% chance to apply level 2 stun effect when attacking,1
+20% chance to apply level 2 slow effect when attacking,1
+20% chance to apply level 3 dark effect when attacking,1
+20% chance to apply level 2 freezing effect when attacking,1
+20% chance to apply level 2 sealing effect when attacking,1
+Ignore Enemy Defense +15%,1

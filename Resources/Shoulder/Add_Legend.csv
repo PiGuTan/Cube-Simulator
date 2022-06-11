@@ -1,0 +1,28 @@
+Line,Weight
+STR +18,3
+DEX +18,3
+INT +18,3
+LUK +18,3
+Max HP +300,3
+Max MP +300,3
+ATT +14,2
+MATT +14,2
+DEF +200,3
+STR +7%,2
+DEX +7%,2
+INT +7%,2
+LUK +7%,2
+Max HP +10%,3
+Max MP +10%,3
+DEF +10%,3
+Critical Damage +1%,1
+Critical Damage +1%,1
+All Stats +5%,2
+STR +2 per 10 Character Levels,2
+DEX +2 per 10 Character Levels,2
+INT +2 per 10 Character Levels,2
+LUK +2 per 10 Character Levels,2
+Elemental Resistance +5%,1
+Increase efficiency of HP recovery items and skills by 30%,3
+Meso Amount +5%,3
+Item Drop Rate +5%,3

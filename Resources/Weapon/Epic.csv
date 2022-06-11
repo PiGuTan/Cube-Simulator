@@ -1,0 +1,15 @@
+Line,Weight
+STR +6%,5
+DEX +6%,5
+INT +6%,5
+LUK +6%,5
+Max HP +6%,5
+Max MP +6%,5
+ATT +6%,2
+MATT +6%,2
+Critical Chance +8%,2
+Damage +6%,2
+All Stats +3%,2
+20% chance to recover 360 HP when attacking,2
+20% chance to recover 180 MP when attacking,2
+Ignore Enemy Defense +15%,2
