@@ -17,6 +17,8 @@ sub_line=Tiers[Tiers.index(main_line)-1]
 Lines={}
 
 if cube_name!='':
+    # can use this to get file path 
+    # os.path.dirname(os.path.realpath(__file__))
     df=pd.read_csv("Resources/prime rates.csv", index_col=0, na_values='')
     x=df.loc[:,main_line][cube_name]
     assert x!='-', "can't cube {0} equip with {1} cube".format(main_line,cube_name)
