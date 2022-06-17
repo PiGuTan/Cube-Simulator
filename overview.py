@@ -10,16 +10,23 @@ subfolders = ["Belt","Bottom","Cape","Earring","Emblem","Eye","Face","Glove","Ha
 current_directory = os.path.dirname(os.path.realpath(__file__))
 resource_directory=current_directory + r"/Resources"
 
+collated_lines = {}
+
 def collate_csv(directory_path):
     for filename in os.listdir(directory_path):
         file_path = os.path.join(directory_path,filename)
         if os.path.isfile(file_path) & file_path.endswith(r".csv"):
-            print(file_path)
-            pass
+            if filename in collated_lines.keys():
+                collated_lines[filename].union(set(pd.read_csv(file_path, index_col=1)["Line"]))
+            else:
+                collated_lines[filename]=set(pd.read_csv(file_path, index_col=1)["Line"])
+
 
 for i in subfolders:
     collate_csv(resource_directory+"/"+i)
 
+print(collated_lines)
+print(type(collated_lines))
 
 """
 df=pd.read_csv("\Resources\prime rates.csv", index_col=0)
