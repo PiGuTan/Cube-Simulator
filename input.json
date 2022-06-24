@@ -2,10 +2,10 @@
 "equip":"Weapon",
 "cube_name":"Additional",
 "prime_rates":[100,0.1996,0.1996] ,
-"desired_lines":["ATT", "Damage","Ignore","HP","D"],
-"desired_number":1,
+"desired_lines":["Damage when attacking boss monsters", "ATT"],
+"desired_number":3,
 "main_line":"Legend" ,
-"additional" : true,
-"sample_size" : 100,
+"additional" : false,
+"sample_size" : 10000,
 "_comments": "Something to print out at the end of log"
 }
