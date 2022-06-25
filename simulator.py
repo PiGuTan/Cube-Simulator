@@ -11,7 +11,7 @@ os.chdir(os.path.dirname(os.path.realpath(__file__)))
 f=open(r"input.json")
 input=json.load(f)
 f.close()
-print(type(input))
+
 #thinking of hardcoding tiers
 class var:
     def assign_from_json(key_for_json,optional_value=None):
@@ -79,7 +79,6 @@ sub_lines=cube_lines_weight(var.sub_line)
 
 main_lines.show_lines()
 sub_lines.show_lines()
-"""hard coding reject class for now"""
 class reject:
     all=[]
     count=0
@@ -87,21 +86,30 @@ class reject:
         match_lines=0
         for x in list:
             if re.match(self.string_to_reject,x):
-                match_lines+=1
+                match_lines+=1 
         return match_lines
     def __init__(self,string_to_reject, lines,identifier=None):
         self.string_to_reject=string_to_reject
         self.lines=lines
         self.identifier=identifier
         if (self.check(main_lines.possible_lines)>0 or self.check(sub_lines.possible_lines)>0): #issue here always true
+            print(identifier, " will be rejected if more than {} counts".format(lines))
             reject.all.append(self)
-            reject.count+=1
+            reject.count+=1 # this is mainly for debug
 
     def check_all(cube_results):
         for x in reject.all:
             if x.check(cube_results)>x.lines:
                 return False
         return True
+
+
+f=open(r"Resources/reject_lines.json")
+reject_dict=json.load(f)
+f.close()
+for i in reject_dict.keys():
+    [reject(reject_dict[i][0], reject_dict[i][1],i)]
+del reject_dict
 
 #probably puting this part into cube class
 def roll_once(prime_rate):
@@ -118,6 +126,7 @@ def roll_lines(prime_rates):
     roll=roll_once(prime_rates)
     while True:
         if not reject.check_all(roll):
+            print("Rjected line: ", roll)
             roll=roll_once(prime_rates)
         else:
             return roll
@@ -132,26 +141,7 @@ def roll_lines(prime_rates):
         return current
 """
 
-test_lines=["Decent sharp eyes enabled", "Decent speed infusion enabled","STR","Damage when attacking boss monsters +20%", "Damage when attacking boss monsters +20%"]
-Decent=reject("Decent .* enabled",1,"Decent skills")
-Invincibility_Time=reject("Invincibility time \+[0-9] second when hit", 1, "Invincibility time")
-IED=reject("Ignore Enemy Defense \+[0-9]{1,2}%",2,"Ignore Enemy Defense %")
-Ignore_Damage_On_Hit=reject("[0-9]{1,2}% chance to ignore 40% damage when hit",2,"Damage Reduction")
-Invincibility_Chance=reject("[0-9]% chance of being invincible for 7 seconds when hit",2,"Invincibility cahnce on hit")
-Item_Drop_Rate=reject("Item Drop Rate \+[0-9]{1,2}%", 2,"Item Drop")
-Boss_Damage=reject("Damage when attacking boss monsters \+[0-9]{1,2}%", 2,"BD")
-print(Decent.check(test_lines)) #need debug this
-print(IED.check(test_lines))
-print(Ignore_Damage_On_Hit.check(test_lines))
-print(Invincibility_Chance.check(test_lines))
-print(Item_Drop_Rate.check(test_lines))
-print(Boss_Damage.check(test_lines))
-print("Last print")
-print(len(reject.all))
-print(reject.count)
-for x in reject.all:
-    print(x.string_to_reject)
-print()
+
 #print(reject.check_all(test_lines))
 
 """Test cubes"""
@@ -175,7 +165,7 @@ df1.to_csv(r"desired.csv")
 print("Total cubes: ", df.shape[0])
 print("Desired lines: ", df1.shape[0])
 print("Success Chance: ", df1.shape[0]/df.shape[0]*100,"%")
-
+print("Average cubes needed: ", df.shape[0]/df1.shape[0])
 
 
 

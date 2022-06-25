@@ -1,0 +1,17 @@
+{
+    "Decent Advanced Bless":["Decent Advanced Bless enabled",1],
+    "Decent Sharp Eyes":["Decent Sharp Eyes enabled",1],
+    "Decent Speed Infusion":["Decent Speed Infusion enabled",1],
+    "Decent Mystic Door":["Decent Mystic Door enabled",1],
+    "Decent Combat Orders":["Decent Combat Orders enabled",1],
+    "Decent Haste":["Decent Haste enabled",1],
+    "Decent Hyper Body":["Decent Hyper Body enabled",1],
+    "Invincible for extra time":["Invincibility time \\+[0-9] second when hit",1],
+    "Ignore Enemy Defense":["Ignore Enemy Defense \\+[0-9]{1,2}%",2],
+    "Chance to Ignore damage":["[0-9]{1,2}% chance to ignore 40% damage when hit",2],
+    "Chance for 7s Invulnerability":["[0-9]% chance of being invincible for 7 seconds when hit",2],
+    "Item Drop":["Item Drop Rate \\+[0-9]{1,2}%",2],
+    "Boss Damage":["Damage when attacking boss monsters \\+[0-9]{1,2}%",2]
+    
+
+}
