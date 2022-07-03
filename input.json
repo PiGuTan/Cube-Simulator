@@ -1,11 +1,12 @@
 {
-"equip":"Weapon",
-"cube_name":"Red",
+"equip":"Emblem",
+"cube_name":"Hexa",
 "prime_rates":[100,100,100] ,
-"desired_lines":["ATT"],
+"desired_lines":["ATT", "Ignore"],
 "desired_number":2,
 "main_line":"Legend" ,
 "additional" : false,
-"sample_size" : 1000,
-"_comments": "Something to print out at the end of log"
+"sample_size" : 100000,
+"off_reject" : true,
+"_comments": "Comments for this run"
 }

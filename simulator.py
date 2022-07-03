@@ -12,7 +12,6 @@ f=open(r"input.json")
 input=json.load(f)
 f.close()
 
-#thinking of hardcoding tiers
 class var:
     def assign_from_json(key_for_json,optional_value=None):
         try:
@@ -28,6 +27,7 @@ class var:
 
     Tiers= ("Rare", "Epic", "Unique", "Legend")
     main_line=assign_from_json("main_line")
+    print("Cubing {0} {1}".format(main_line,equip))
     assert main_line!="Rare", "This spreadsheet doesn't suppport Rare cubing"
     assert main_line in Tiers, "Main Line is not recognised"
     sub_line=Tiers[Tiers.index(main_line)-1]
@@ -37,14 +37,20 @@ class var:
 
     additional=assign_from_json("additional")
     cube_name=assign_from_json("cube_name")
+    off_reject=assign_from_json("off_reject", True)
+
     if cube_name!='':
-        df=pd.read_csv("Resources/prime rates.csv", index_col=0, na_values='')
+        try:
+            df=pd.read_csv("Resources/prime rates.csv", index_col=0, na_values='')
+        except FileNotFoundError:
+            raiseExceptions("Directory \'Resources/Prime rates.csv\' could not be found")
         x=df.loc[:,main_line][cube_name]
         assert x!='-', "can't cube {0} equip with {1} cube".format(main_line,cube_name)
         prime_rates=tuple(map(float, x.split(',')))
+        print("{0} cubes used {1} with prime rates of {2}".format(cube_name,"for add pot" if additional else "", prime_rates))
     else:
         prime_rates=tuple(assign_from_json("prime_rates"))
-    print("Prime rates of cubes are: ",prime_rates)
+        print("Prime rates of cubes are: ",prime_rates)
 
     csv_header= [] # ["line1", "line2", "line3",...,"desired"]
     for x in range(len(prime_rates)):
@@ -52,33 +58,34 @@ class var:
     csv_header.append("desired")
 
     sample_size=assign_from_json("sample_size", 10000)
+    comments=assign_from_json("_comments",None)
     Lines={}
 
 del f, input
 
 class cube_lines_weight: #probably making a child from this
-    def __init__(self,line):
+    def __init__(self,main_line_tier):
         try:
-            df=pd.read_csv("Resources/{0}/{1}{2}.csv".format(var.equip,"Add_" if var.additional else "" ,line))
+            resource_path="Resources/{0}/{1}{2}.csv".format(var.equip,"Add_" if var.additional else "" ,main_line_tier)
+            df=pd.read_csv(resource_path)
         except FileNotFoundError:
-            raiseExceptions("No records for",var.main_line, var.equip,)
+            raiseExceptions("No records for",main_line_tier, var.equip, "in path",resource_path)
 
+        self.name=main_line_tier
         self.possible_lines=list(df.Line)
         self.weight=tuple(df.Weight)
 
     def show_lines(self):
-#!!!! change this and put this into variables
+        print()
+        print("Possible Main Lines({0})".format(self.name))
         print(self.possible_lines)
 
 main_lines=cube_lines_weight(var.main_line)
 sub_lines=cube_lines_weight(var.sub_line)
 
-
-
-#to reject line i probably need a method to count lines
-
 main_lines.show_lines()
 sub_lines.show_lines()
+
 class reject:
     all=[]
     count=0
@@ -126,7 +133,8 @@ def roll_lines(prime_rates):
     roll=roll_once(prime_rates)
     while True:
         if not reject.check_all(roll):
-            print("Rjected line: ", roll)
+            if not var.off_reject:
+                print("Rjected line: ", roll)
             roll=roll_once(prime_rates)
         else:
             return roll
@@ -161,7 +169,9 @@ df1=df[df.desired>=var.desired_number]
 df.to_csv(r'all lines.csv')
 df1.to_csv(r"desired.csv")
 
-
+print()
+if var.comments:
+    print(var.comments)
 print("Total cubes: ", df.shape[0])
 print("Desired lines: ", df1.shape[0])
 print("Success Chance: ", df1.shape[0]/df.shape[0]*100,"%")
