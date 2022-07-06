@@ -1,9 +1,9 @@
 {
-"equip":"Emblem",
+"equip":"Secondary",
 "cube_name":"Hexa",
 "prime_rates":[100,100,100] ,
-"desired_lines":["ATT", "Ignore"],
-"desired_number":2,
+"desired_lines":["ATT", "Ignore","Damage when attacking"],
+"desired_number":3,
 "main_line":"Legend" ,
 "additional" : false,
 "sample_size" : 100000,
