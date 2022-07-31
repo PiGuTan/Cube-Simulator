@@ -1,8 +1,8 @@
 {
-"equip":"Emblem",
+"equip":"Secondary",
 "cube_name":"Hexa",
 "prime_rates":[100,100,100] ,
-"desired_lines":["ATT", "Ignore"],
+"desired_lines":["ATT", "Ignore Enemy"],
 "desired_number":2,
 "main_line":"Legend" ,
 "additional" : false,

@@ -12,6 +12,4 @@
     "Chance for 7s Invulnerability":["[0-9]% chance of being invincible for 7 seconds when hit",2],
     "Item Drop":["Item Drop Rate \\+[0-9]{1,2}%",2],
     "Boss Damage":["Damage when attacking boss monsters \\+[0-9]{1,2}%",2]
-    
-
 }

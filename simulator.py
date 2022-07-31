@@ -6,11 +6,11 @@ import os
 import json
 import random
 
-
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 f=open(r"input.json")
 input=json.load(f)
 f.close()
+log_path='simulator.log'
 
 class var:
     def assign_from_json(key_for_json,optional_value=None):
