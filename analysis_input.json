@@ -1,4 +1,4 @@
 {
-"Attack":["ATT","%"],
-"IED":["Ignore Enemy Defense","%"]
+"Attack %":["ATT","%"],
+"IED %":["Ignore Enemy Defense","%"]
 }
