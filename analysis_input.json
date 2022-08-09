@@ -1,4 +1,5 @@
 {
 "Attack %":["ATT","%"],
-"IED %":["Ignore Enemy Defense","%"]
+"IED %":["Ignore Enemy Defense","%"],
+"Boss":["Damage when attacking boss monsters","%"]
 }
