@@ -1,8 +1,8 @@
 {
-"equip":"Secondary",
+"equip":"Ring",
 "cube_name":"Red",
 "prime_rates":[100,100,100] ,
-"desired_lines":["ATT", "Ignore Enemy", "Damage when attacking boss monsters"],
+"desired_lines":["All Stats", "STR"],
 "desired_number": 3,
 "main_line":"Legend" ,
 "additional" : false,

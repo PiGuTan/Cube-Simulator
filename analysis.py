@@ -17,7 +17,8 @@ f=open(r"input.json")
 settings=json.load(f)
 f.close()
 df=pd.read_csv("Desired.csv", index_col=0, na_values='')
-
+if "Replace_From" in input and "Replace_To" in input:
+    df=df.replace(input["Replace_To"],input["Replace_From"])
 # %%
 sample_size=settings["sample_size"]
 
@@ -65,8 +66,8 @@ class keep:
 before=0
 after=1
 keep_dict={}
-for x in input.keys():
-    keep_dict[x]=keep(x,input[x][before],input[x][after])
+for x in input["Analysis"].keys():
+    keep_dict[x]=keep(x,input["Analysis"][x][before],input["Analysis"][x][after])
 del before, after, input
 #theres 2 collections keep_dict and keep.list
 

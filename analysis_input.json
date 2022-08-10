@@ -1,5 +1,7 @@
 {
-"Attack %":["ATT","%"],
-"IED %":["Ignore Enemy Defense","%"],
-"Boss":["Damage when attacking boss monsters","%"]
+"Replace_From":"All Stats",
+"Replace_To":"STR",
+"Analysis":{
+    "STR":["STR","%"]
+}
 }
